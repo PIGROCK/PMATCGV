@@ -45,7 +45,7 @@
         .stepper-val { font-size: 2.2em; font-weight: bold; width: 60px; text-align: center; color: var(--highlight); }
 
         #main-ui { display: none; flex-direction: column; height: 100vh; width: 100vw; overflow: hidden; }
-        header { text-align: center; padding: 10px; background: #000; border-bottom: 2px solid var(--highlight); flex-shrink: 0; }
+        header { text-align: center; padding: 10px; background: #000; border-top: 2px solid var(--highlight); flex-shrink: 0; }
         #game-container { display: flex; flex: 1; overflow: hidden; }
         
         .player-board { flex: 1; padding: 15px; display: flex; flex-direction: column; align-items: center; border-right: 1px solid #333; overflow-y: auto; }
@@ -350,13 +350,11 @@
         </div>
     </div>
 
-    <!-- PMATCG PAPER SCREEN -->
     <div id="pmatcg-paper-screen" class="fullscreen-screen" style="display:none; background:rgba(0,0,0,0.85); flex-direction:column; z-index: 10000; backdrop-filter: blur(5px);">
         <div style="position: absolute; top: 20px; left: 20px; z-index: 10001;">
             <button class="btn" onclick="document.getElementById('pmatcg-paper-screen').style.display='none'; document.getElementById('pmatcg-gallery-modal').style.display='flex';" style="background: #333; color: white; border-color: #555; padding: 10px 20px; font-size: 14px;">🔙 Back</button>
         </div>
         
-        <!-- THAI PAPER -->
         <div id="paper-th" class="scroll-box" style="display:block; margin-top:20px;">
             <div class="page-divider"><span>--- PAGE 1 ---</span></div>
             <h1>951971: The 1st Hard Fork</h1>
@@ -658,7 +656,6 @@
             <p style="text-align: center; color: #a0aec0; font-size: 0.85em; margin-top: 30px;">[ 10 of 10 ]</p>
         </div>
 
-        <!-- ENGLISH PAPER TRANSLATION -->
         <div id="paper-en" class="scroll-box" style="display:none; margin-top:20px;">
             <div class="page-divider"><span>--- PAGE 1 ---</span></div>
             <h1>951971: The 1st Hard Fork</h1>
@@ -960,8 +957,6 @@
             <p style="text-align: center; color: #a0aec0; font-size: 0.85em; margin-top: 30px;">[ 10 of 10 ]</p>
         </div>
     </div>
-    <!-- END PMATCG PAPER SCREEN -->
-
     <div id="pmatcg-gallery-modal" class="fullscreen-screen" style="display:none; background:var(--bg-color); flex-direction:column;">
         <h2 id="gallery-title" style="color:var(--highlight); margin-top:30px; text-transform: uppercase;">Select Your Character (Player 1)</h2>
         <div id="gallery-container" style="display:flex; overflow-x:auto; overflow-y:hidden; align-items:center; width:95%; padding:20px; gap:20px; flex:1;">
@@ -1041,15 +1036,11 @@
                 <button id="close-rules-btn" class="btn primary">ปิด</button>
             </div>
             <div id="rules-content" style="margin-top: 15px;">
-                <!-- Content handled by JS langDict -->
-            </div>
+                </div>
         </div>
     </div>
 
     <div id="main-ui">
-        <header>
-            <h2 style="margin: 0; font-size: 1.2em; text-transform: uppercase;">PMATCGV_0113_951971</h2>
-        </header>
         <div id="game-container">
             <div id="p1-board" class="player-board">
                 <h3 style="color: var(--p1-color); margin: 5px 0;"><span id="p1-name-display">จิตเดิมแท้</span><br class="mobile-only" style="display: none;"> (<span id="p1-points">0</span>)</h3>
@@ -1088,6 +1079,9 @@
                 <div id="p2-dice" class="dice-container"></div>
             </div>
         </div>
+        <header>
+            <h2 style="margin: 0; font-size: 1.2em; text-transform: uppercase;">PMATCGV_0113_951971</h2>
+        </header>
     </div>
 
 <script>
